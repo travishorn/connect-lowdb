@@ -1,6 +1,6 @@
 {
   "name": "connect-lowdb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "lowdb session store for Connect",
   "exports": "./index.js",
   "scripts": {
