@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "connect-session",
+    "connect",
+    "express",
+    "json",
+    "lowdb",
+    "session",
+    "store"
+  ],
   "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
   "license": "MIT",
   "type": "module",
