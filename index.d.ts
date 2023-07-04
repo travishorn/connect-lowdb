@@ -2,11 +2,11 @@ import session from "express-session";
 import { Low } from "lowdb";
 
 declare module "connect-lowdb" {
-    type LowdbStoreOptions = {
+    export type LowdbStoreOptions = {
         db: Low;
     } & session.SessionOptions;
 
-    export default class LowdbStore extends session.Store {
+    export class LowdbStore extends session.Store {
         constructor(options?: LowdbStoreOptions);
         db: Low;
 
@@ -18,4 +18,7 @@ declare module "connect-lowdb" {
         clear(cb: (err: any) => any): void;
         length(cb: (err: any, length: number) => any): void;
     }
+
+    const lowdbStore = (session: session.Session) => LowdbStore;
+    export default lowdbStore;
 }
