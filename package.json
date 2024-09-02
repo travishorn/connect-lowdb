@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "format": "prettier --write ."
   },
+  "types": "index.d.ts",
   "keywords": [
     "connect-session",
     "connect",
