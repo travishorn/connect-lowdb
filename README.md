@@ -13,19 +13,20 @@ npm install lowdb connect-lowdb express-session
 
 ```javascript
 import session from "express-session";
-import { Low, JSONFile } from "lowdb";
+import { JSONFilePreset } from "lowdb/node";
 import lowdbStore from "connect-lowdb";
 
-const adapter = new JSONFile("db.json");
-const db = new Low(adapter);
+const db = await JSONFilePreset("db.json", null);
 const LowdbStore = lowdbStore(session);
 
-app.use(session({
-  store: new LowdbStore({ db }),
-  resave: false,
-  saveUninitialized: false,
-  secret: "keyboard cat",
-}));
+app.use(
+  session({
+    store: new LowdbStore({ db }),
+    resave: false,
+    saveUninitialized: false,
+    secret: "keyboard cat",
+  }),
+);
 ```
 
 ### LowdbStore(options)
@@ -42,7 +43,7 @@ An instance of `Low` created by [lowdb](https://github.com/typicode/lowdb).
 ## License
 
 The MIT License (MIT)
-Copyright © 2022 Travis Horn
+Copyright © 2024 Travis Horn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the “Software”), to deal in

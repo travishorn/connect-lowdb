@@ -3,9 +3,10 @@
   "version": "2.1.0",
   "description": "lowdb session store for Connect",
   "exports": "./index.js",
-  "types": "./index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [
     "connect-session",
@@ -30,8 +31,15 @@
     "url": "https://github.com/travishorn/connect-lowdb/issues"
   },
   "homepage": "https://github.com/travishorn/connect-lowdb#readme",
-  "dependencies": {
+  "peerDependencies": {
     "express-session": "^1.17.3",
-    "lowdb": "^6.0.1"
+    "lowdb": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3"
   }
 }
