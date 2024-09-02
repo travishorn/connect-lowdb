@@ -1,7 +1,7 @@
 # connect-lowdb
 
 **connect-lowdb** provides [lowdb](https://github.com/typicode/lowdb) session
-storage for Express. Requires lowdb >= 2.0.0.
+storage for Express. Requires lowdb ^7.0.0.
 
 ## Installation
 
