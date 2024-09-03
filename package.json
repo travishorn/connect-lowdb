@@ -18,7 +18,18 @@
     "session",
     "store"
   ],
-  "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
+  "contributors": [
+    {
+      "name": "Travis Horn",
+      "email": "travis@travishorn.com",
+      "url": "https://travishorn.com/"
+    },
+    {
+      "name": "Keith Brown",
+      "email": "keithbrown39423@outlook.com",
+      "url": "https://keithbrown.dev/"
+    }
+  ],
   "license": "MIT",
   "type": "module",
   "engines": {
